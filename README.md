@@ -1,2 +1,2 @@
 # libe-utils
-Some utils functions for LibéLabo apps
+Some utility functions for LibéLabo apps

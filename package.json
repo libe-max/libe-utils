@@ -1,0 +1,19 @@
+{
+  "name": "libe-utils",
+  "version": "0.1.0",
+  "description": "Some utility functions for LibéLabo apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libe-max/libe-utils.git"
+  },
+  "author": "Maxime Fabas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/libe-max/libe-utils/issues"
+  },
+  "homepage": "https://github.com/libe-max/libe-utils#readme"
+}
