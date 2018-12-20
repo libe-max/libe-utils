@@ -4,7 +4,9 @@
   "description": "Some utility functions for LibéLabo apps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "standard": "standard --verbose | snazzy",
+    "standard-fix": "standard --fix --verbose | snazzy"
   },
   "repository": {
     "type": "git",
