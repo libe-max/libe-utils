@@ -109,10 +109,12 @@ function parseTsv (params = {}) {
 
       // If number is expected
       } else if (types[key] === 'number') {
-        if (isNaN(
-          parseFloat(cleanVal, 10))
-        ) throw new Error(`Cannot convert to number: ${cleanVal}`)
-        lineObj[key] = parseFloat(cleanVal, 10)
+        if (isNaN(parseFloat(cleanVal, 10))) {
+          lineObj[key] = 0
+          console.warn(`Invalid value, expected number, got ${cleanVal}`)
+        } else {
+          lineObj[key] = parseFloat(cleanVal, 10)
+        }
 
       // If boolean is expected
       } else if (types[key] === 'boolean') {
@@ -130,7 +132,8 @@ function parseTsv (params = {}) {
 
       // If type is unknown
       } else {
-        throw new Error(`Unknown type to convert to: ${types[key]}`)
+        lineObj[key] = cleanVal
+        console.warn(`Unknown type to convert to: ${types[key]}`)
       }
     })
     data.push(lineObj)
