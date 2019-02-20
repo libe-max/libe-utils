@@ -1,13 +1,13 @@
 module.exports = getClosestDomParent
 
-function getClosestDomParent ( elem, selector ) {
-  if (!Element.prototype.matches) {
-    Element.prototype.matches =
-      Element.prototype.matchesSelector ||
-      Element.prototype.mozMatchesSelector ||
-      Element.prototype.msMatchesSelector ||
-      Element.prototype.oMatchesSelector ||
-      Element.prototype.webkitMatchesSelector ||
+function getClosestDomParent (elem, selector) {
+  if (!window.Element.prototype.matches) {
+    window.Element.prototype.matches =
+      window.Element.prototype.matchesSelector ||
+      window.Element.prototype.mozMatchesSelector ||
+      window.Element.prototype.msMatchesSelector ||
+      window.Element.prototype.oMatchesSelector ||
+      window.Element.prototype.webkitMatchesSelector ||
       function (s) {
         const matches = (
           this.document ||
@@ -19,7 +19,7 @@ function getClosestDomParent ( elem, selector ) {
       }
   }
   // Get closest match
-  for ( ; elem && elem !== document; elem = elem.parentNode ) {
+  for (; elem && elem !== document; elem = elem.parentNode) {
     if (elem.matches(selector)) return elem
   }
   return null
