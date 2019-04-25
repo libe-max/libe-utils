@@ -1,6 +1,6 @@
 {
   "name": "libe-utils",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Some utility functions for LibéLabo apps",
   "main": "index.js",
   "scripts": {

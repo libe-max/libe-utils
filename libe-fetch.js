@@ -5,6 +5,8 @@ module.exports = libeFetch
 function libeFetch () {
   const cookies = parseCookies()
   const lblb_tracking = cookies.lblb_tracking
+  const lblb_session = window.lblb_session || Math.random().toString(36).slice(2)
+  window.lblb_session = lblb_session
   const lblb_posting = cookies.lblb_posting || window.lblb_posting
   if (cookies.lblb_posting) window.lblb_posting = lblb_posting
   const url = arguments[0]
@@ -16,7 +18,7 @@ function libeFetch () {
     throw new Error('Body must be a parsable JSON string')
   }
   const body = JSON.parse(strBody)
-  body._credentials = { lblb_tracking, lblb_posting, tut: 'tut' }
+  body._credentials = { lblb_tracking, lblb_session, lblb_posting }
   const newOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
