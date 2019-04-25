@@ -1,3 +1,5 @@
+const parseCookies = require('./parse-cookies')
+
 module.exports = libeFetch
 
 function libeFetch () {
