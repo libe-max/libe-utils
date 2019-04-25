@@ -1,7 +1,7 @@
-import getClosestDomParent from './get-closest-dom-parent'
-import libeFetch from './libe-fetch'
-import parseCookies from './parse-cookies'
-import { parseTsv, parseTsvWithTabs } from './parse-tsv'
+const getClosestDomParent = require('./get-closest-dom-parent')
+const libeFetch = require('./libe-fetch')
+const parseCookies = require('./parse-cookies')
+const { parseTsv, parseTsvWithTabs } = require('./parse-tsv')
 
 module.exports = {
   getClosestDomParent,
