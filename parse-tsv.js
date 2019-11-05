@@ -15,6 +15,4 @@ function parseTsv (data, widths) {
   return pages
 }
 
-module.exports = {
-  parseTsv
-}
+module.exports = parseTsv
