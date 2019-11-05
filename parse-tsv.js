@@ -7,7 +7,7 @@ function parseTsv (data, widths) {
     const noWhiteLinesPage = page.filter(line => line.join('').trim() !== '')
     const pageOfObjects = noWhiteLinesPage.slice(1).map(line => {
       const obj = {}
-      noWhiteLinesPage[0].forEach((label, i) => obj[label] = line[i])
+      noWhiteLinesPage[0].forEach((label, i) => { obj[label] = line[i] })
       return obj
     })
     return pageOfObjects
