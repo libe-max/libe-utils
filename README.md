@@ -62,7 +62,7 @@ Plain javascript functions. The idea is to circumvent the use of external depend
 ## Contents
 
 ```
-libe-components
+libe-utils
 ├── package.json
 ├── package-lock.json
 ├── index.js
