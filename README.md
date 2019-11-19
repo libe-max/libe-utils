@@ -90,8 +90,7 @@ const tsv = `
 id \t name   \t favorites_albums \t id \t album_name                       \t artist_name  \n
 1  \t Alice  \t 1, 2             \t 1  \t In the court of the Crimson King \t King Crimson \n
 2  \t Bob    \t 2, 3             \t 2  \t Five Leaves Left                 \t Nick Drake   \n
-3  \t Clara  \t 1, 3             \t 3  \t Straight Outta Compton           \t N.W.A        \n
-`
+3  \t Clara  \t 1, 3             \t 3  \t Straight Outta Compton           \t N.W.A        \n`
 
 const parsed = parseTsv(tsv, [3, 3])
 console.log(parsed)
