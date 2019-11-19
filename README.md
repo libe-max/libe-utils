@@ -108,7 +108,6 @@ console.log(parsed)
  *   ]
  * ]
  */
-
 ```
 
 ## Auteurs
